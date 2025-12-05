@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Object and Array Manipulation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script&gt;
+    
+    //Making an object 
+    let obj = {
+        id:1,
+        Name: &quot;Farhan&quot;
+    };
+
+    // add new property
+    obj.F_Name = &quot;Qamar Uddin&quot;;
+
+    obj.id=2; // update property
+    
+    // delete property
+    delete obj.Name;
+
+    // object with array
+    let arr = [
+        {id:1, Name: &quot;Farhan&quot;, F_Name: &quot;Qamar&quot;},
+        {id:2, Name: &quot;Hassan&quot;, F_Name: &quot;Zafar&quot;},
+        {id:3, Name: &quot;Mazhar&quot;, F_Name: &quot;Yaseen&quot;},
+        {id:4, Name: &quot;Mohsin&quot;, F_Name: &quot;Faheem&quot;}
+    ];
+    
+    // Pushing a new object in array
+
+    let new1 = {
+        id: 1,
+        Name: &quot;Ali&quot;,
+        F_name: &quot;Liaqut&quot;
+    };
+    arr.push(new1);
+    
+    // Updating id with the value of (loop)
+    
+    for (let i=0; i&lt;arr.length; i++){
+        arr[i].id=i;
+    }
+
+    // Merging two objects using spread
+    let Merge1 = { city: &quot;Karachi&quot;, country: &quot;Pakistan&quot; };
+    let Merge2 = { occupation: &quot;Developer&quot;, age: 25 };
+    
+    let mergedObj = { ...Merge1, ...Merge2 };
+    
+    console.log(&quot;Original Object :&quot;, obj);
+    console.log(&quot;Final Array after push and ID update:&quot;, arr);
+    console.log(&quot;Newly Merged Object (using spread):&quot;, mergedObj);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
